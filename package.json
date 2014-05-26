@@ -1,0 +1,11 @@
+{
+    "name": "mobi",
+    "description": "Framework for mobile platform",
+    "version": "1.0.0",
+    "author": {
+        "name": "Yuanyan Cao",
+        "mail": "yuanyan.cao@gmail.com"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
