@@ -1,6 +1,6 @@
 {
     "name": "mobi",
-    "description": "Framework for mobile platform",
+    "description": "UI framework for mobile web.",
     "version": "1.0.0",
     "author": {
         "name": "Yuanyan Cao",

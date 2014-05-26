@@ -1,6 +1,6 @@
 Mobi
 ====
-> Framework for mobile platform.
+> UI framework for mobile web.
 
 ## Features
 * Mobile Only
