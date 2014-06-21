@@ -1,5 +1,5 @@
 require([
-    '../../script/mobi'
+    '../../scripts/mobi'
 ], function(){
 
     // CountUp
