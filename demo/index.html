@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>MOBI DEMO</title>
+    <title>DEMO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
@@ -121,23 +121,23 @@
 
 <div class="ui-bottom-bar js-no-bounce" role="toolbar"> <!-- tabindex="0" 在android上会触发一个高亮边框 -->
     <!-- 尾部内容 -->
-    <a class="ui-bottom-bar-button js-active" role="button" data-toggle="tab" data-target=".page1">
+    <a class="ui-bottom-bar-button js-active" role="button" data-toggle="tab" data-target=".scene1">
         <span class="ui-icon ion-ios7-camera-outline"></span>
         <span class="ui-label">CSS</span>
     </a>
-    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".page2">
+    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".scene2">
         <span class="ui-icon ion-ios7-stopwatch-outline"></span>
         <span class="ui-label">CSS</span>
     </a>
-    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".page3">
+    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".scene3">
         <span class="ui-icon ion-ios7-star-outline"></span>
         <span class="ui-label">JS</span>
     </a>
-    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".page4">
+    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".scene4">
         <span class="ui-icon ion-ios7-gear-outline"></span>
         <span class="ui-label">JS</span>
     </a>
-    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".page5">
+    <a class="ui-bottom-bar-button" role="button" data-toggle="tab" data-target=".scene5">
         <span class="ui-icon ion-ios7-bell-outline"></span>
         <span class="ui-label">JS</span>
     </a>
@@ -145,9 +145,9 @@
 </div>
 
 <!-- 一个App可以多个page -->
-<div class="ui-page page1 js-active">
+<div class="ui-scene scene1 js-active">
 
-    <div class="ui-page-content">
+    <div class="ui-scene-content">
         <!-- 主体内容 -->
 
         <div class="ui-tab js-active" id="page1-tab1" role="tabpanel">
@@ -214,9 +214,9 @@
     </div>
 </div>
 
-<div class="ui-page page2">
+<div class="ui-scene scene2">
 
-    <div class="ui-page-content">
+    <div class="ui-scene-content">
         <div class="ui-tab js-active" id="page2-tab1" role="tabpanel">
             <h3 class="ui-caption">按钮</h3>
             <p class="ui-panel">
@@ -247,9 +247,9 @@
     </div>
 </div>
 
-<div class="ui-page page3">
+<div class="ui-scene scene3">
 
-    <div class="ui-page-content">
+    <div class="ui-scene-content">
 
         <div class="ui-tab js-active" id="page3-tab1" role="tabpanel">
 
@@ -361,9 +361,9 @@
 
 </div>
 
-<div class="ui-page page4">
+<div class="ui-scene scene4">
 
-    <div class="ui-page-content">
+    <div class="ui-scene-content">
 
         <div class="ui-tab js-active" id="page4-tab1" role="tabpanel">
 
@@ -440,9 +440,9 @@
     </div>
 </div>
 
-<div id="page5-container" class="ui-page page5">
+<div id="page5-container" class="ui-scene scene5">
 
-    <div class="ui-page-content">
+    <div class="ui-scene-content">
 
         <div class="ui-tab js-active" id="page5-tab1" role="tabpanel">
 
@@ -524,7 +524,7 @@
 
 <!-- /对话类内容 -->
 
-<script data-main="scripts/demo" src="http://requirejs.org/docs/release/2.1.14/comments/require.js"></script>
+<script data-main="scripts/demo" src="./vendor/require.js"></script>
 
 </body>
 </html>

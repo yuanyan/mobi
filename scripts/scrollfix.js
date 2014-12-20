@@ -11,31 +11,31 @@ define(['./os', './event'], function(){
             event.preventDefault();
         });
 
-        var $page = $('.ui-page');
-        var $content = $('.ui-page-content', $page);
+        var $page = $('.ui-scene');
+        var $content = $('.ui-scene-content', $page);
         if(!$content[0] || !$page[0]) return;
 
         // Variables to track inputs
         var startTopScroll;
 
         // Handle the start of interactions
-        $(document).on('touchstart', '.ui-page', function(event){
-            var page = event.currentTarget;
-            startTopScroll = page.scrollTop;
+        $(document).on('touchstart', '.ui-scene', function(event){
+            var scene = event.currentTarget;
+            startTopScroll = scene.scrollTop;
 
             if(startTopScroll <= 0)
-                page.scrollTop = 1;
+                scene.scrollTop = 1;
 
-            if(startTopScroll + page.offsetHeight >= page.scrollHeight)
-                page.scrollTop = page.scrollHeight - page.offsetHeight - 1;
+            if(startTopScroll + scene.offsetHeight >= scene.scrollHeight)
+                scene.scrollTop = scene.scrollHeight - scene.offsetHeight - 1;
 
-        }).on('touchmove', '.ui-page', function(event){
-                var page = event.currentTarget;
+        }).on('touchmove', '.ui-scene', function(event){
+                var scene = event.currentTarget;
                 // TODO cache element select
-                var content = page.querySelector('.ui-page-content');
+                var content = scene.querySelector('.ui-scene-content');
                 // Offset value have include content and border
-                if( content.offsetHeight < page.clientHeight ||
-                    content.offsetWidth < page.clientWidth){
+                if( content.offsetHeight < scene.clientHeight ||
+                    content.offsetWidth < scene.clientWidth){
                     // your element have overflow
                     return event.preventDefault();
                 }

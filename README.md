@@ -50,8 +50,8 @@ Copy the HTML below to begin working with a minimal MOBI document.
         </div>
     </div>
 
-    <div id="page1" class="ui-page js-active">
-        <div class="ui-page-content">
+    <div id="scene1" class="ui-scene js-active">
+        <div class="ui-scene-content">
              <h1>Hello, world!</h1>
         </div>
     </div>
