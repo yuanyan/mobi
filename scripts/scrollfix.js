@@ -11,9 +11,9 @@ define(['./os', './event'], function(){
             event.preventDefault();
         });
 
-        var $page = $('.ui-scene');
-        var $content = $('.ui-scene-content', $page);
-        if(!$content[0] || !$page[0]) return;
+        var $scene = $('.ui-scene');
+        var $content = $('.ui-scene-content', $scene);
+        if(!$content[0] || !$scene[0]) return;
 
         // Variables to track inputs
         var startTopScroll;

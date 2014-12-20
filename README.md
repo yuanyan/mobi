@@ -43,7 +43,7 @@ Copy the HTML below to begin working with a minimal MOBI document.
     </div>
 
     <div class="ui-bottom-bar js-no-bounce" role="toolbar" tabindex="0">
-        <button class="ui-bottom-bar-button js-active" data-toggle="tab" data-target="#page1">
+        <button class="ui-bottom-bar-button js-active" data-toggle="tab" data-target="#scene1">
             <span class="ui-icon"></span>
             <span class="ui-label">CSS</span>
         </button>
