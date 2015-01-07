@@ -1,4 +1,4 @@
-define(['./event', './data', './touch'], function(){
+define(function(){
 
     var activeClass = 'js-active';
     var showEvent = 'show:tab';

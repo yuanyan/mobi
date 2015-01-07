@@ -1,4 +1,4 @@
-define(['./debounce', './event'], function () {
+define(['./debounce'], function () {
     // TODO: skip load invisible element
     var debounce = $.debounce;
     // cache computing rect avoid re-layout

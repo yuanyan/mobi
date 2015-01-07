@@ -1,4 +1,4 @@
-define(['./event', './data', './touch', './transition', './requestAnimationFrame'], function(){
+define(['./transition'], function(){
     
     var activeClass = 'js-active';
     var slidEvent = 'slid:carousel';

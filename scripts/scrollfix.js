@@ -2,7 +2,7 @@
 // https://github.com/filamentgroup/Overthrow/
 // http://bradfrostweb.com/blog/mobile/fixed-position/
 
-define(['./os', './event'], function(){
+define(['./os'], function(){
 
     var os = $.os;
     function scrollFix() {

@@ -1,6 +1,6 @@
 Mobi
 ====
-> UI framework for mobile web.
+> Mobi is the framework for developing mobile only projects on the web.
 
 ## Features
 * Mobile Only
@@ -29,17 +29,17 @@ Copy the HTML below to begin working with a minimal MOBI document.
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>MOBI</title>
+    <title>Title</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <!-- MOBI CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/mobi.css">
 </head>
 <body class="ui-app">
 
     <div class="ui-top-bar js-no-bounce">
-        MOBI
+        Title
     </div>
 
     <div class="ui-bottom-bar js-no-bounce" role="toolbar" tabindex="0">
@@ -52,11 +52,13 @@ Copy the HTML below to begin working with a minimal MOBI document.
 
     <div id="scene1" class="ui-scene js-active">
         <div class="ui-scene-content">
-             <h1>Hello, world!</h1>
+             <h1>Hello world!</h1>
         </div>
     </div>
 
-    <!-- MOBI JS -->
+    <!-- JS -->
+    <script src="zepto.js"></script>
+    <script src="requestAnimationFrame.js"></script>
     <script src="js/mobi.js"></script>
   </body>
 </html>

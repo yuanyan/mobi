@@ -1,4 +1,4 @@
-define(['./event', './data', './requestAnimationFrame'], function () {
+define(function () {
 
     var getTime = Date.now;
 

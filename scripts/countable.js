@@ -1,4 +1,4 @@
-define(['./data', './requestAnimationFrame'], function(){
+define(function(){
 
     function Counter(element, options) {
 

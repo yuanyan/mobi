@@ -1,4 +1,4 @@
-define(['./event', './data'], function(){
+define(function(){
 
     var animations = {}; /* Cache animation rules */
     var prefix = '-webkit-';

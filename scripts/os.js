@@ -1,4 +1,4 @@
-define(['./zepto'], function(){
+define(function(){
     var ua = navigator.userAgent.toLowerCase();
     function platform (os){
         var ver = ('' + (new RegExp(os + '(\\d+((\\.|_)\\d+)*)').exec(ua) || [,0])[1]).replace(/_/g, '.');

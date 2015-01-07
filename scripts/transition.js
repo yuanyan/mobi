@@ -1,4 +1,4 @@
-define(['./zepto'], function(){
+define(function(){
 
     // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
     // ============================================================

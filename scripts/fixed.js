@@ -1,4 +1,4 @@
-define(['./os', './event'], function(){
+define(['./os'], function(){
 
     var os = $.os;
     // Why not use feature detecting? It's performance care and we already know only the iOS 4.3 not support fixed

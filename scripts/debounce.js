@@ -13,7 +13,7 @@
  * }
  *
  */
-define(['./zepto'], function(){
+define(function(){
 
     $.debounce = function (func, threshold, execAsap){
         var timeout;

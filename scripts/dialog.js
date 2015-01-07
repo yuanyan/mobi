@@ -1,4 +1,4 @@
-define(['./os', './event', './data', './touch', './transition', './fixed'], function(){
+define(['./os', './transition', './fixed'], function(){
 
     var os = $.os;
     var showClass = 'js-show';
