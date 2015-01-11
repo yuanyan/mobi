@@ -57,7 +57,7 @@ define(function(){
         })
     };
 
-    $(document).on('tap.tab.data-api', '[data-toggle="tab"]', function (e) {
+    $(document).on('tap', '[data-toggle="tab"]', function (e) {
         e.preventDefault();
         $(this).tab('show');
     })

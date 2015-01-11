@@ -1,0 +1,132 @@
+/* List */
+.ui-caption {
+    margin: 18px 0 5px;
+    padding: 0 12px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #7c7b83;
+    -wbkit-text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.ui-list {
+    margin-bottom: 20px;
+    padding-bottom: 1px;
+    background: white;
+
+    border-style: solid;
+    border-color: #e5e5eb;
+    border-width: 1px 0 1px 0;
+}
+
+.ui-item {
+    position: relative;
+    margin-left: 12px;
+
+    list-style-type: none;
+
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000;
+}
+
+.ui-item+.ui-item {
+    border-top: 1px solid #e5e5eb
+}
+
+/* Link item */
+.ui-item > a {
+    display: block;
+    position: relative;
+    margin-left: -12px; /* Why negative value? parent element has marin-left 12px */
+    padding: 10px 12px;
+    color: #000;
+}
+
+.ui-item > a.js-active {
+    z-index: 1;
+    color: #fff;
+    background: #2087fc;
+}
+
+.ui-item:after {
+    position: absolute;
+    z-index: 2;
+    top: -1px;
+    bottom: -1px;
+    width: 42px;
+    line-height: 42px;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
+
+.ui-item.deleting:after {
+    content: "Delete";
+    right: 0;
+    line-height: 40px;
+    background: #fd3c31;
+}
+
+.ui-item .ui-right {
+    font-size: 14px;
+    position: absolute;
+    text-align: right;
+    right: 34px;
+}
+
+.ui-item .ui-red-dot {
+    position: absolute;
+    top: 16px;
+}
+
+/*  A list-level or item-level class, cool? Yeah! */
+.ui-list.arrow-right > .ui-item:after, .ui-item.arrow-right:after {
+    color: #CCC;   /* This color some with border color */
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    width: 7px;
+    height: 7px;
+    margin-top: -5px;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    -webkit-transform: rotate(45deg);
+}
+
+.ui-list.arrow-right > .ui-item.js-active:after, .ui-item.arrow-right.js-active:after {
+    color: #fff;
+}
+
+.ui-list.icon-left .ui-icon {
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    width: 25px;
+    height: 25px;
+}
+
+.ui-list.icon-left > .ui-item {
+    padding-left: 40px;
+}
+
+.ui-title-item {
+    position: relative;
+    padding: 0 12px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 26px;
+    color: #000;
+    background: #f5f5f5;
+    border: 1px solid #e5e5eb;
+    border-width: 1px 0;
+    box-shadow: none
+}
+
+.ui-title-item:first-child {
+    border-top-width: 0
+}
+
+/* /List */

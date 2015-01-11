@@ -1,0 +1,31 @@
+/* Backdrop */
+.js-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: #000000;
+    display: block;
+
+    /*
+     Only add a transitional effect for opacity property
+     avoid emulate position fixed trigger transitional effect on height
+    */
+    -webkit-transition: opacity 200ms;
+    transition: opacity 200ms;
+
+    z-index: 9999;
+}
+
+.js-backdrop.js-effect-fade {
+    opacity: 0;
+}
+
+.js-backdrop.js-show {
+    visibility: visible;
+    opacity: .5;
+}
+
+/* /Backdrop */

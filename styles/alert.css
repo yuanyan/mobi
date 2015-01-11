@@ -1,0 +1,101 @@
+/* Alert */
+
+/* positioning shell for the actual modal */
+.ui-alert {
+    border-radius: 10px;
+    width: 280px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+
+    opacity: 0;
+
+    /* visibility: hidden; */   /* I don't know why on iOS 4.3 visibility: visible is not work */
+
+    backface-visibility: hidden;
+    background-color: #ECECEC;
+
+    -webkit-transition: 300ms;
+    transition: 300ms;
+
+}
+
+app-dialog.js-show > .ui-alert{
+    opacity: 1;
+    visibility: visible;
+
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(1) !important;
+    transform: translate3d(-50%, -50%, 0) scale(1) !important;
+}
+
+.ui-alert-header,
+.ui-alert-footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.ui-alert-header {
+    margin-top: 15px;
+}
+
+.ui-alert-title {
+    position: static;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.ui-alert-body {
+    margin: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.ui-alert-footer {
+    width: 100%;
+    padding: 0;
+}
+
+.ui-alert-button {
+    display: block;
+    max-width: 280px;
+    width: auto;
+    margin: 0;
+    padding: 8px 0px;
+    border: 0;
+    border-top: solid 1px #b5b5b5;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+
+    position: relative;
+
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    color: #167efb;
+    background-color: rgba(255, 255, 255, 0.01);
+    transition: background-color .1s ease-in-out;
+}
+
+.ui-alert-button + .ui-alert-button {
+    border-left: solid 1px #b5b5b5;
+}
+
+/* /Alert */

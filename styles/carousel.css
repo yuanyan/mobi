@@ -1,0 +1,88 @@
+
+/* Carousel */
+.ui-carousel {
+    position: relative;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.ui-carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ui-carousel-item  {
+    position: relative;
+    display: none;
+    -webkit-transition: .5s ease-in-out left;
+    transition: .5s ease-in-out left;
+    z-index: 9;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.ui-carousel-inner > .js-show,
+.ui-carousel-inner > .js-active,
+.ui-carousel-inner > .js-next,
+.ui-carousel-inner > .js-prev {
+    display: block;
+}
+
+.ui-carousel-inner > .js-active {
+    left: 0;
+    z-index: 10;
+}
+
+.ui-carousel-inner > .js-show,
+.ui-carousel-inner > .js-next,
+.ui-carousel-inner > .js-prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.ui-carousel-inner > .js-next {
+    left: 100%;
+}
+
+.ui-carousel-inner > .js-prev {
+    left: -100%;
+}
+.ui-carousel-inner > .js-next.js-left,
+.ui-carousel-inner > .js-prev.js-right {
+    left: 0;
+}
+.ui-carousel-inner > .js-active.js-left {
+    left: -100%;
+}
+
+.ui-carousel-inner > .js-active.js-right {
+    left: 100%;
+}
+
+.ui-carousel-indicators {
+    z-index: 11;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+
+    -webkit-transform: translate3d(0,0,0); /* Hack for android 4.0 that indicators not display */
+}
+
+.ui-carousel-indicators li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+.ui-carousel-indicators li.js-active {
+    background-color: #fff;
+}
+/* /Carousel */

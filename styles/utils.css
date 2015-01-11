@@ -1,0 +1,105 @@
+/* Utils */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .ui-1dpx-t, .ui-1dpx-b, .ui-1dpx-tb {
+        background-size: 100% 1px;
+    }
+
+    .ui-1dpx-t {
+        background: -webkit-gradient(linear,left bottom,left top,color-stop(.5,rgba(0, 0, 0, 0)),color-stop(.5,#C8C7CC),to(#C8C7CC))left top repeat-x;
+        border-top: 0;
+    }
+
+    .ui-1dpx-b {
+        background: -webkit-gradient(linear,left top,left bottom,color-stop(.5,rgba(0, 0, 0, 0)),color-stop(.5,#C8C7CC),to(#C8C7CC))left bottom repeat-x;
+        border-bottom: 0;
+    }
+
+    .ui-1dpx-tb {
+        background: -webkit-gradient(linear,left bottom,left top,color-stop(.5,rgba(0, 0, 0, 0)),color-stop(.5,#C8C7CC),to(#C8C7CC))left top repeat-x,-webkit-gradient(linear,left top,left bottom,color-stop(.5,rgba(0, 0, 0, 0)),color-stop(.5,#C8C7CC),to(#C8C7CC))left bottom repeat-x;
+        border-top: 0;
+        border-bottom: 0;
+    }
+}
+
+.ui-ignore-space {
+    font-size: 0;
+}
+
+.ui-no-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ui-red {
+    color: rgb(250, 60, 60) !important;
+}
+
+.ui-gray {
+    color: #808080 !important;
+}
+
+.ui-red-dot, .ui-blue-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.ui-red-dot {
+    background: rgb(250, 60, 60) !important;
+}
+
+.ui-blue-dot {
+    background: #0079FF !important;
+}
+
+.ui-right {
+    float: right !important;
+}
+
+.ui-left {
+    float: left !important;
+}
+
+.ui-block {
+    display: block !important;
+}
+
+.ui-inline-block {
+    display: inline-block !important;
+}
+
+.ui-red-counter, .ui-blue-counter  {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 4px;
+    font-size: 13px;
+    color: #FFF;
+
+    text-align: center;
+
+    z-index: 3;
+    border-radius: 18px;
+}
+
+.ui-red-counter {
+    background: rgb(250, 60, 60);
+}
+
+.ui-blue-counter {
+    background: #2087fc;
+}
+
+.ui-flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* /Utils */

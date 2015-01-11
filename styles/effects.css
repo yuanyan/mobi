@@ -1,0 +1,55 @@
+/* Effects */
+
+/* For Alert */
+
+.js-effect-from-below .ui-alert {
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(.5);
+    transform: translate3d(-50%, -50%, 0)  scale(.5);
+}
+
+.js-effect-from-above .ui-alert {
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(1.5);
+    transform: translate3d(-50%, -50%, 0) scale(1.5);
+}
+
+.js-effect-from-bottom .ui-alert{
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+}
+
+.js-effect-from-top .ui-alert {
+    -webkit-transform: translate3d(-50%, -100%, 0);
+    transform: translate3d(-50%, -100%, 0);
+}
+
+.js-effect-from-right .ui-alert {
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+
+.js-effect-from-left .ui-alert {
+    -webkit-transform: translate3d(-100%, -50%, 0);
+    transform: translate3d(-100%, -50%, 0);
+}
+
+/* For ActionSheet */
+
+.js-effect-from-bottom .ui-actionsheet {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+
+/* For Notify */
+.js-effect-from-top .ui-notify {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+
+.js-effect-drop-down .ui-notify {
+    /* Set origin for drop down effect */
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}

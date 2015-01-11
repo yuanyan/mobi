@@ -1,0 +1,63 @@
+/* ActionSheet */
+
+.ui-actionsheet {
+    width: 100%;
+    padding: 0 8px;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out
+
+visibility: hidden;
+
+    backface-visibility: hidden;
+}
+
+app-dialog.js-show > .ui-actionsheet {
+    opacity: 1;
+    visibility: visible;
+
+    -webkit-transform: translate3d(0, 0, 0) scale(1) !important;
+    transform: translate3d(0, 0, 0) scale(1) !important;
+}
+
+.ui-actionsheet li, .ui-actionsheet-cancel {
+    display: block;
+    list-style-type: none;
+
+    color: #007AFF;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #ECECEC;
+
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.5);
+}
+
+.ui-actionsheet li:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.ui-actionsheet li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.ui-actionsheet-cancel {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin: .5em 0;
+}
+
+/* /ActionSheet */

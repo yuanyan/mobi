@@ -1,5 +1,6 @@
 define(function(){
-
+    var showEvent = 'show:spinner';
+    var hideEvent = 'hide:spinner';
     var animations = {}; /* Cache animation rules */
     var prefix = '-webkit-';
     var ratio = window.devicePixelRatio || 1;
@@ -82,10 +83,10 @@ define(function(){
     };
 
     Spinner.prototype.show = function(){
-        var e  = $.Event('show.spinner');
+        var e  = $.Event(showEvent);
         this.$element.trigger(e);
-        if (this.isShown || e.isDefaultPrevented()) return
-        this.isShown = true
+        if (this.isShown || e.isDefaultPrevented()) return;
+        this.isShown = true;
 
         if(!this.$wrap){
             this.draw()
@@ -95,10 +96,10 @@ define(function(){
     };
 
     Spinner.prototype.hide = function(){
-        var e = $.Event('hide.spinner')
-        this.$element.trigger(e)
-        if (!this.isShown || e.isDefaultPrevented()) return
-        this.isShown = false
+        var e = $.Event(hideEvent);
+        this.$element.trigger(e);
+        if (!this.isShown || e.isDefaultPrevented()) return;
+        this.isShown = false;
 
         if(this.$wrap){
             this.$wrap.hide();

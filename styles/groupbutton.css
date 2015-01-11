@@ -1,0 +1,57 @@
+/* Group Button */
+
+.ui-groupbutton {
+    display: table;
+    font-size: 1em;
+    border-color: rgba(0, 0, 0, 0);
+    white-space: nowrap;
+    margin: 10px auto;
+}
+
+.ui-groupbutton .ui-button {
+    display: table-cell;
+    margin: 0;
+    min-width: 70px;
+    border-width: 1px 0 1px 1px;
+    border-radius: 0;
+    position: relative;
+    float: left; /* Hack for iOS 4.3 that make position: relative work right */
+}
+
+.ui-groupbutton .ui-button:active {
+    color: #0079FF;
+    background-color: #D3E5F9;
+}
+
+.ui-groupbutton .ui-button.js-active {
+    color: #fff;
+    background: #0079FF;
+}
+
+.ui-groupbutton .ui-button:first-child {
+    border-radius: 3px 0 0 3px;
+    border-right-width: 0;
+}
+
+.ui-groupbutton .ui-button:last-child {
+    border-radius: 0 3px 3px 0;
+    border-width: 1px;
+}
+
+/* Gray Style */
+
+.ui-groupbutton.ui-gray .ui-button{
+    color: rgb(128, 128, 128);
+    border-color: rgb(128, 128, 128);
+}
+
+.ui-groupbutton.ui-gray .ui-button:active {
+    background-color: rgb(230, 230, 230);
+}
+
+.ui-groupbutton.ui-gray .ui-button.js-active {
+    color: #fff;
+    background: rgb(128, 128, 128);
+}
+
+/* /Group Button */

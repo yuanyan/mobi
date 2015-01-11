@@ -1,20 +1,11 @@
-define(['./os', './transition', './fixed'], function(){
+define(['./transition', './fixed'], function(){
 
-    var os = $.os;
     var showClass = 'js-show';
     // why event without namespace? Zepto do not support trigger custom event with namespace like foo.bar .
     var showEvent = 'show:dialog';
     var shownEvent = 'shown:dialog';
     var hideEvent = 'hide:dialog';
     var hiddenEvent = 'hidden:dialog';
-
-    var tapEvent = 'tap';
-    // Why not use tap event? We know click event has a 300+ delay, on iOS 5- this will trigger click event on backdrop.
-    if(os.ios < 5){
-        tapEvent = "click";
-    }
-
-    var dismissDialogEventName = tapEvent + '.dismiss.dialog';
 
     function Dialog(element, options) {
         this.options   = options;
@@ -48,7 +39,7 @@ define(['./os', './transition', './fixed'], function(){
             return e.preventDefault();
         })
 
-        this.$element.on( dismissDialogEventName, '[data-dismiss="dialog"]', $.proxy(this.hide, this))
+        this.$element.on('tap', '[data-dismiss="dialog"]', $.proxy(this.hide, this))
 
         this.backdrop(function () {
             var transition = $.support.transition && that.options.effect
@@ -71,7 +62,8 @@ define(['./os', './transition', './fixed'], function(){
             var e = $.Event(shownEvent, { relatedTarget: _relatedTarget });
 
             transition ?
-                that.$element.find('.js-dialog-content')
+                // FIXME: css selector is not safe
+                that.$element.find('> div')
                     // wait for dialog to slide in
                     .one($.support.transition.end, function () {
                         that.$element.focus().trigger(e)
@@ -102,7 +94,7 @@ define(['./os', './transition', './fixed'], function(){
         this.$element
             .removeClass(showClass)
             .attr('aria-hidden', true)
-            .off(dismissDialogEventName);
+            .off('tap');
 
         $.support.transition && (this.options.effect) ?
             this.$element
@@ -136,7 +128,7 @@ define(['./os', './transition', './fixed'], function(){
                 .appendTo(this.$element.parent())
                 .emulateFixed();
 
-            this.$element.on(dismissDialogEventName, $.proxy(function (e) {
+            this.$element.on('tap', $.proxy(function (e) {
                 if (e.target !== e.currentTarget) return;
                 this.options.backdrop == 'static'
                     ? this.$element[0].focus.call(this.$element[0])
@@ -185,7 +177,7 @@ define(['./os', './transition', './fixed'], function(){
         })
     }
 
-    $(document).on(tapEvent + '.dialog.data-api', '[data-toggle="dialog"]', function (e) {
+    $(document).on('tap', '[data-toggle="dialog"]', function (e) {
 
         var $this   = $(this);
         var $target = $($this.attr('data-target'));

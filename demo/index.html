@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css" href="../styles/mobi.css?embed" />
-    <link rel="stylesheet" type="text/css" href="../vendor/ionicons/css/ionicons.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/mobi.css?embed"/>
+    <link rel="stylesheet" type="text/css" href="../vendor/ionicons/css/ionicons.css"/>
     <style>
         .my-banner {
             margin-bottom: 20px;
@@ -16,18 +16,21 @@
             height: 85px;
             color: #ffffff
         }
+
         .my-banner-text {
             display: block;
         }
+
         .my-banner-count {
             font-size: 40px;
             -webkit-transform: translate3d(0, 0, 0);
         }
+
         .my-banner-unit {
             font-size: 20px;
         }
 
-        .my-item-left{
+        .my-item-left {
             position: absolute;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -63,11 +66,16 @@
             width: 60px;
             text-align: center;
             position: absolute;
-            top:0;
+            top: 0;
             right: 0;
             background: rgb(250, 34, 34);
             z-index: 1;
             color: #fff;
+        }
+
+        .my-drawer {
+            background: #323949;
+            color: #EEE;
         }
 
         [data-lazy] {
@@ -78,48 +86,80 @@
             border: 1px solid #eee;
         }
 
+        .ui-right {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+        }
+
     </style>
 </head>
-<body class="ui-app">
+<body>
 
-<div class="ui-top-bar js-no-bounce">
-    <div class="ui-tab scene1 js-active">
+<app-stage data-dragger="drawer" data-target="#drawer-right">
+<app-top-bar class="js-no-bounce">
+    <app-tab class="scene1 js-active">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button js-active" data-toggle="tab" data-target="#scene1-tab1" aria-controls="tab1" role="tab">列表1</li>
-            <li class="ui-button" data-toggle="tab" data-target="#scene1-tab2" aria-controls="tab2" role="tab">列表2<span class="ui-red-counter">123</span></li>
+            <li class="ui-button js-active" data-toggle="tab" data-target="#scene1-tab1" aria-controls="tab1"
+                role="tab">列表1
+            </li>
+            <li class="ui-button" data-toggle="tab" data-target="#scene1-tab2" aria-controls="tab2" role="tab">列表2<span
+                    class="ui-red-counter">123</span></li>
         </ul>
-    </div>
-    <div class="ui-tab scene2">
+    </app-tab>
+    <app-tab class="scene2">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button js-active" data-toggle="tab" data-target="#scene2-tab1" aria-controls="tab1" role="tab">按钮</li>
+            <li class="ui-button js-active" data-toggle="tab" data-target="#scene2-tab1" aria-controls="tab1"
+                role="tab">按钮
+            </li>
             <li class="ui-button" data-toggle="tab" data-target="#scene2-tab2" aria-controls="tab2" role="tab">图标按钮</li>
         </ul>
-    </div>
-    <div class="ui-tab scene3">
+    </app-tab>
+    <app-tab class="scene3">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button  js-active" data-toggle="tab" data-target="#scene3-tab1" aria-controls="tab1" role="tab">Spinner</li>
-            <li class="ui-button" data-toggle="tab" data-target="#scene3-tab2" aria-controls="tab2" role="tab">Carousel</li>
-            <li class="ui-button" data-toggle="tab" data-target="#scene3-tab3" aria-controls="tab3" role="tab">Counter</li>
-            <li class="ui-button" data-toggle="tab" data-target="#scene3-tab4" aria-controls="tab4" role="tab">Deleter</li>
+            <li class="ui-button  js-active" data-toggle="tab" data-target="#scene3-tab1" aria-controls="tab1"
+                role="tab">Spinner
+            </li>
+            <li class="ui-button" data-toggle="tab" data-target="#scene3-tab2" aria-controls="tab2" role="tab">
+                Carousel
+            </li>
+            <li class="ui-button" data-toggle="tab" data-target="#scene3-tab3" aria-controls="tab3" role="tab">Counter
+            </li>
+            <li class="ui-button" data-toggle="tab" data-target="#scene3-tab4" aria-controls="tab4" role="tab">Deleter
+            </li>
         </ul>
-    </div>
-    <div class="ui-tab scene4">
+    </app-tab>
+    <app-tab class="scene4">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button js-active" data-toggle="tab" data-target="#scene4-tab1" aria-controls="tab1" role="tab">Tab</li>
-            <li class="ui-button" data-toggle="tab" data-target="#scene4-tab2" aria-controls="tab2" role="tab">Notify</li>
-            <li class="ui-button" data-toggle="tab" data-target="#scene4-tab3" aria-controls="tab3" role="tab">Alert</li>
-            <li class="ui-button" data-toggle="tab" data-target="#scene4-tab4" aria-controls="tab4" role="tab">ActionSheet</li>
+            <li class="ui-button js-active" data-toggle="tab" data-target="#scene4-tab1" aria-controls="tab1"
+                role="tab">Tab
+            </li>
+            <li class="ui-button" data-toggle="tab" data-target="#scene4-tab2" aria-controls="tab2" role="tab">Notify
+            </li>
+            <li class="ui-button" data-toggle="tab" data-target="#scene4-tab3" aria-controls="tab3" role="tab">Alert
+            </li>
+            <li class="ui-button" data-toggle="tab" data-target="#scene4-tab4" aria-controls="tab4" role="tab">
+                ActionSheet
+            </li>
         </ul>
-    </div>
-    <div class="ui-tab scene5">
+    </app-tab>
+    <app-tab class="scene5">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button js-active" data-toggle="tab" data-target="#scene5-tab1" aria-controls="tab1" role="tab">SearchBar</li>
-            <li class="ui-button" data-toggle="tab" data-target="#scene5-tab2" aria-controls="tab2" role="tab">LazyLoad</li>
+            <li class="ui-button js-active" data-toggle="tab" data-target="#scene5-tab1" aria-controls="tab1"
+                role="tab">SearchBar
+            </li>
+            <li class="ui-button" data-toggle="tab" data-target="#scene5-tab2" aria-controls="tab2" role="tab">
+                LazyLoad
+            </li>
         </ul>
+    </app-tab>
+    <div class="ui-right">
+        <span class="ui-icon ion-navicon-round" data-toggle="drawer" data-target="#drawer-right"></span>
     </div>
-</div>
-
-<div class="ui-bottom-bar js-no-bounce" role="toolbar"> <!-- tabindex="0" 在android上会触发一个高亮边框 -->
+</app-top-bar>
+<app-bottom-bar class="js-no-bounce" role="toolbar"> <!-- tabindex="0" 在android上会触发一个高亮边框 -->
     <!-- 尾部内容 -->
     <a class="ui-bottom-bar-button js-active" role="button" data-toggle="tab" data-target=".scene1">
         <span class="ui-icon ion-ios7-camera-outline"></span>
@@ -142,15 +182,13 @@
         <span class="ui-label">JS</span>
     </a>
     <!-- /尾部内容-->
-</div>
+</app-bottom-bar>
 
 <!-- 一个App可以多个scene -->
-<div class="ui-scene scene1 js-active">
-
-    <div class="ui-scene-content">
+<app-scene class="scene1 js-active">
         <!-- 主体内容 -->
 
-        <div class="ui-tab js-active" id="scene1-tab1" role="tabpanel">
+        <app-tab class="js-active" id="scene1-tab1" role="tabpanel">
 
             <p class="my-banner">
                 <span class="my-banner-text">你已累计消费</span>
@@ -159,7 +197,8 @@
             </p>
 
             <ul class="ui-list">
-                <li class="ui-item arrow-right"><a href="#">团购券<span class="ui-right">未使用 <span class="ui-red">11</span></span></a></li>
+                <li class="ui-item arrow-right"><a href="#">团购券<span class="ui-right">未使用 <span class="ui-red">11</span></span></a>
+                </li>
                 <li class="ui-item ui-ignore-space"><a href="#">
                     <div class="my-item-left">
                         <span class="ui-block">还剩</span>
@@ -167,14 +206,17 @@
                     </div>
                     <div class="my-item-right">
                         <p class="ui-no-wrap">商家名称: 上海的自来水来自海上上海的自来水来自海上</p>
+
                         <p class="ui-red">兑换码: 88888888</p>
+
                         <p class="ui-gray">2999-03-01</p>
                     </div>
                 </a></li>
             </ul>
 
             <ul class="ui-list arrow-right">
-                <li class="ui-item"><a href="#">订单<span class="ui-right">待付款 <span class="ui-red">11</span></span></a></li>
+                <li class="ui-item"><a href="#">订单<span class="ui-right">待付款 <span class="ui-red">11</span></span></a>
+                </li>
             </ul>
 
             <ul class="ui-list arrow-right">
@@ -186,9 +228,9 @@
                 <li class="ui-item"><a href="#">收藏商家</a></li>
             </ul>
 
-        </div>
+        </app-tab>
 
-        <div class="ui-tab" id="scene1-tab2" role="tabpanel">
+        <app-tab id="scene1-tab2" role="tabpanel">
 
             <ul class="ui-list">
                 <li class="ui-title-item">A</li>
@@ -209,16 +251,14 @@
                 <li class="ui-title-item">T</li>
                 <li class="ui-item"><a href="">Tencent</a></li>
             </ul>
-        </div>
+        </app-tab>
         <!-- /主体内容-->
-    </div>
-</div>
+</app-scene>
 
-<div class="ui-scene scene2">
-
-    <div class="ui-scene-content">
-        <div class="ui-tab js-active" id="scene2-tab1" role="tabpanel">
+<app-scene class="scene2">
+        <app-tab class="js-active" id="scene2-tab1" role="tabpanel">
             <h3 class="ui-caption">按钮</h3>
+
             <p class="ui-panel">
                 <button class="ui-button">按钮</button>
                 <button class="ui-button ui-info">按钮</button>
@@ -227,43 +267,43 @@
             </p>
 
             <h3 class="ui-caption">块级按钮</h3>
+
             <p class="ui-panel">
                 <button class="ui-button ui-block">块级按钮</button>
                 <button class="ui-button ui-block ui-info">块级按钮</button>
                 <button class="ui-button ui-block ui-success">块级按钮</button>
                 <button class="ui-button ui-block ui-danger">块级按钮</button>
             </p>
-        </div>
+        </app-tab>
 
-        <div class="ui-tab" id="scene2-tab2" role="tabpanel">
+        <app-tab id="scene2-tab2" role="tabpanel">
             <h3 class="ui-caption">图标按钮</h3>
+
             <p class="ui-panel">
                 <button class="ui-button ui-block">查看附近 <span class="ion-ios7-location-outline"></span></button>
                 <button class="ui-button ui-block">语音搜索 <span class="ion-ios7-mic-outline"></span></button>
                 <button class="ui-button ui-block">下载应用 <span class="ion-ios7-cloud-download-outline"></span></button>
             </p>
-        </div>
+        </app-tab>
+</app-scene>
 
-    </div>
-</div>
-
-<div class="ui-scene scene3">
-
-    <div class="ui-scene-content">
-
-        <div class="ui-tab js-active" id="scene3-tab1" role="tabpanel">
+<app-scene class="scene3">
+        <app-tab class="js-active" id="scene3-tab1" role="tabpanel">
 
             <h3 class="ui-caption">Dark</h3>
+
             <p class="ui-panel" style="position:relative; height: 50px;">
                 <span data-spinner></span>
             </p>
 
             <h3 class="ui-caption">Light</h3>
+
             <p class="ui-panel" style="position:relative; height: 50px; background-color:rgba(0, 0, 0, 0.5)">
                 <span data-spinner data-color="0,0,0"></span>
             </p>
 
             <h3 class="ui-caption">Trigger</h3>
+
             <p class="ui-panel">
                 <button class="ui-button ui-block" id="show-body-spinner">
                     Show Spinner
@@ -274,9 +314,9 @@
                 </button>
             </p>
 
-        </div>
+        </app-tab>
 
-        <div class="ui-tab" id="scene3-tab2" role="tabpanel">
+        <app-tab id="scene3-tab2" role="tabpanel">
             <div class="ui-carousel js-slide" data-ride="carousel">
                 <ol class="ui-carousel-indicators">
                     <li class="js-active"></li>
@@ -299,21 +339,23 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </app-tab>
 
-        <div class="ui-tab" id="scene3-tab3" role="tabpanel">
+        <app-tab id="scene3-tab3" role="tabpanel">
             <h3 class="ui-caption">CountUp</h3>
+
             <div class="ui-panel">
                 <span class="my-banner-count" data-countable data-from="0" data-to="9521">0</span>
             </div>
 
             <h3 class="ui-caption">CountDown</h3>
+
             <div class="ui-panel">
                 <span class="my-banner-count" data-countable data-from="9521" data-to="0">9521</span>
             </div>
-        </div>
+        </app-tab>
 
-        <div class="ui-tab" id="scene3-tab4" role="tabpanel">
+        <app-tab id="scene3-tab4" role="tabpanel">
             <ul class="ui-list">
                 <li class="ui-title-item">待使用</li>
                 <li class="ui-item ui-ignore-space">
@@ -324,10 +366,13 @@
                         </div>
                         <div class="my-item-right">
                             <p class="ui-no-wrap">商家名称: 上海的自来水来自海上上海的自来水来自海上</p>
+
                             <p class="ui-red">兑换码: 88888888</p>
+
                             <p class="ui-gray">2999-03-01</p>
                         </div>
                     </a>
+
                     <div class="my-delete">删除</div>
                 </li>
                 <li class="ui-item ui-ignore-space"><a class="my-deletable" href="#">
@@ -337,10 +382,14 @@
                     </div>
                     <div class="my-item-right">
                         <p class="ui-no-wrap">商家名称: 上海的自来水来自海上上海的自来水来自海上</p>
+
                         <p class="ui-red">兑换码: 88888888</p>
+
                         <p class="ui-gray">2999-03-01</p>
                     </div>
-                </a><div class="my-delete">删除</div>
+                </a>
+
+                    <div class="my-delete">删除</div>
                 </li>
                 <li class="ui-item ui-ignore-space"><a class="my-deletable" href="#">
                     <div class="my-item-left">
@@ -349,116 +398,126 @@
                     </div>
                     <div class="my-item-right">
                         <p class="ui-no-wrap">商家名称: 上海的自来水来自海上上海的自来水来自海上</p>
+
                         <p class="ui-red">兑换码: 88888888</p>
+
                         <p class="ui-gray">2999-03-01</p>
                     </div>
-                </a><div class="my-delete">删除</div>
+                </a>
+
+                    <div class="my-delete">删除</div>
                 </li>
             </ul>
-        </div>
+        </app-tab>
+</app-scene>
 
-    </div>
-
-</div>
-
-<div class="ui-scene scene4">
-
-    <div class="ui-scene-content">
-
-        <div class="ui-tab js-active" id="scene4-tab1" role="tabpanel">
+<app-scene class="scene4">
+        <app-tab class="js-active" id="scene4-tab1" role="tabpanel">
 
             <h3 class="ui-caption">Blue</h3>
+
             <div class="ui-panel">
                 <ul class="ui-groupbutton">
-                    <li class="ui-button js-active" data-target="#" data-toggle="tab">列表 1<span class="ui-red-counter">123</span></li>
+                    <li class="ui-button js-active" data-target="#" data-toggle="tab">列表 1<span class="ui-red-counter">123</span>
+                    </li>
                     <li class="ui-button" data-target="#" data-toggle="tab">列表 2</li>
-                    <li class="ui-button" data-target="#" data-toggle="tab">列表 3<span class="ui-red-counter">2</span></li>
+                    <li class="ui-button" data-target="#" data-toggle="tab">列表 3<span class="ui-red-counter">2</span>
+                    </li>
                 </ul>
             </div>
 
             <h3 class="ui-caption">Gray</h3>
+
             <div class="ui-panel">
                 <ul class="ui-groupbutton ui-gray">
                     <li class="ui-button js-active" data-target="#" data-toggle="tab">列表 1</li>
                     <li class="ui-button" data-target="#" data-toggle="tab">列表 2</li>
-                    <li class="ui-button" data-target="#" data-toggle="tab">列表 3<span class="ui-blue-counter">1</span></li>
+                    <li class="ui-button" data-target="#" data-toggle="tab">列表 3<span class="ui-blue-counter">1</span>
+                    </li>
                 </ul>
             </div>
 
-        </div>
+        </app-tab>
 
-        <div class="ui-tab" id="scene4-tab2" role="tabpanel">
+        <app-tab id="scene4-tab2" role="tabpanel">
 
             <h3 class="ui-caption">Notify</h3>
+
             <p class="ui-panel">
-                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myNotify" data-type="notify" data-effect="from-top" data-cache="false">
+                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myNotify" data-type="notify"
+                        data-effect="from-top" data-cache="false">
                     Launch notify from top
                 </button>
             </p>
-        </div>
+        </app-tab>
 
-        <div class="ui-tab" id="scene4-tab3" role="tabpanel">
+        <app-tab id="scene4-tab3" role="tabpanel">
 
             <h3 class="ui-caption">Alert</h3>
+
             <p class="ui-panel">
-                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert" data-effect="from-below" data-cache="false">
+                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert"
+                        data-effect="from-below" data-cache="false">
                     Launch alert from below
                 </button>
 
-                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert" data-effect="from-above" data-cache="false">
+                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert"
+                        data-effect="from-above" data-cache="false">
                     Launch alert from above
                 </button>
 
-                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert" data-effect="from-left" data-cache="false">
+                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert"
+                        data-effect="from-left" data-cache="false">
                     Launch alert from left
                 </button>
 
-                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert" data-effect="from-right" data-cache="false">
+                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert"
+                        data-effect="from-right" data-cache="false">
                     Launch alert from right
                 </button>
 
-                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert" data-effect="from-top" data-cache="false">
+                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert"
+                        data-effect="from-top" data-cache="false">
                     Launch alert from top
                 </button>
 
-                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert" data-effect="from-bottom" data-cache="false">
+                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myAlert" data-type="alert"
+                        data-effect="from-bottom" data-cache="false">
                     Launch alert from bottom
                 </button>
             </p>
 
-        </div>
+        </app-tab>
 
-        <div class="ui-tab" id="scene4-tab4" role="tabpanel">
+        <app-tab id="scene4-tab4" role="tabpanel">
             <h3 class="ui-caption">Action Sheet</h3>
+
             <p class="ui-panel">
-                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myActionsheet" data-type="actionsheet" data-effect="from-bottom" data-cache="false">
+                <button class="ui-button ui-block" data-toggle="dialog" data-target="#myActionsheet"
+                        data-type="actionsheet" data-effect="from-bottom" data-cache="false">
                     Launch actionsheet from bottom
                 </button>
             </p>
-        </div>
+        </app-tab>
+</app-scene>
 
-    </div>
-</div>
-
-<div id="scene5-container" class="ui-scene scene5">
-
-    <div class="ui-scene-content">
-
-        <div class="ui-tab js-active" id="scene5-tab1" role="tabpanel">
+<app-scene id="scene5-container" class="scene5">
+        <app-tab class="js-active" id="scene5-tab1" role="tabpanel">
 
             <h3 class="ui-caption">Normal</h3>
 
             <div id="my-search" class="ui-search">
                 <form class="ui-search-form">
-                    <input id="my-search-input" type="search" autocomplete="off" autocorrect="off" placeholder="搜索" class="ui-search-input">
+                    <input id="my-search-input" type="search" autocomplete="off" autocorrect="off" placeholder="搜索"
+                           class="ui-search-input">
                     <span id="my-search-reset" class="ui-search-reset">x</span>
                     <span id="my-search-cancel" class="ui-search-cancel">取消</span>
                 </form>
             </div>
 
-        </div>
+        </app-tab>
 
-        <div class="ui-tab" id="scene5-tab2" role="tabpanel">
+        <app-tab id="scene5-tab2" role="tabpanel">
 
             <h3 class="ui-caption">Nature</h3>
             <img data-lazy="http://lorempixel.com/400/200/nature/1/">
@@ -481,27 +540,32 @@
             <img data-lazy="http://lorempixel.com/400/200/technics/7/">
             <img data-lazy="http://lorempixel.com/400/200/technics/8/">
             <img data-lazy="http://lorempixel.com/400/200/technics/9/">
-        </div>
+        </app-tab>
+</app-scene>
 
-    </div>
-</div>
+</app-stage>
+
+<app-drawer class="my-drawer" id="drawer-right">
+    <h3>Drawer</h3>
+</app-drawer>
 
 <!-- 对话类内容: 属于App级别，应在App节点下 -->
 
-<div id="myNotify" data-backdrop=false data-expires=2000 role="dialog" class="ui-dialog" aria-labelledby="myNotifyLable" aria-hidden="true">
-    <div class="js-dialog-content ui-notify">
+<app-dialog id="myNotify" data-backdrop=false data-expires=2000 role="dialog" aria-labelledby="myNotifyLable"
+            aria-hidden="true">
+    <div class="ui-notify">
         <p id="myNotifyLable">城市定位失败</p>
     </div>
-</div>
+</app-dialog>
 
-<div id="myLoading" data-backdrop=false role="dialog" class="ui-dialog" aria-labelledby="myNotifyLable" aria-hidden="true">
-    <div class="js-dialog-content ui-notify">
+<app-dialog id="myLoading" data-backdrop=false role="dialog" aria-labelledby="myNotifyLable" aria-hidden="true">
+    <div class="ui-notify">
         <a data-dismiss="dialog" class="ui-pop-cancel">取消</a>
     </div>
-</div>
+</app-dialog>
 
-<div id="myAlert" role="alertdialog"  class="ui-dialog" aria-labelledby="myAlertLable" aria-hidden="true">
-    <div class="js-dialog-content ui-alert">
+<app-dialog id="myAlert" role="alertdialog" aria-labelledby="myAlertLable" aria-hidden="true">
+    <div class="ui-alert">
         <div class="ui-alert-header"><h3 class="ui-alert-title" id="myAlertLable">Title</h3></div>
         <div class="ui-alert-body" role="note"><p>This is a message.</p></div>
         <div class="ui-alert-footer">
@@ -510,17 +574,17 @@
             <a data-dismiss="dialog" role="button" class="ui-alert-button">取消</a>
         </div>
     </div>
-</div>
+</app-dialog>
 
-<div id="myActionsheet" role="dialog" class="ui-dialog" aria-labelledby="myActionsheetLable" aria-hidden="true">
-    <div class="js-dialog-content ui-actionsheet">
+<app-dialog id="myActionsheet" role="dialog" aria-labelledby="myActionsheetLable" aria-hidden="true">
+    <div class="ui-actionsheet">
         <ul>
             <li role="button" data-dismiss="dialog">删除</li>
             <li role="button" data-dismiss="dialog">发送</li>
         </ul>
         <a role="button" data-dismiss="dialog" class="ui-actionsheet-cancel">取消</a>
     </div>
-</div>
+</app-dialog>
 
 <!-- /对话类内容 -->
 <script src="../vendor/zepto.js"></script>

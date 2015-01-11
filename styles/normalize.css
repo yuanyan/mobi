@@ -1,0 +1,33 @@
+/* Normalize */
+
+html, body, ul, ol, img, p, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: -apple-system-font, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Removes webkit border when the element is on focus */
+a, a:active, a:focus,
+button, button:active,
+input, input:focus,
+select, select:focus,
+textarea, textarea:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+a {
+    text-decoration: none;
+    color: #0079FF;
+}
+
+ol, ul  {
+    list-style: none;
+}
+
+/* /Normalize */

@@ -1,0 +1,11 @@
+/* Tab */
+
+app-tab {
+    display: none;
+}
+
+app-tab.js-active {
+    display: block;
+}
+
+/* /Tab */

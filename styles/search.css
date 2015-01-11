@@ -1,0 +1,111 @@
+
+/* SearchBar */
+
+.ui-search {
+    position: relative;
+    background: #D5D5D5;
+    padding:6px 8px;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.07), 0 1px 1px rgba(0, 0, 0, 0.05);
+
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.ui-search-form {
+    background: #fff;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    padding: 0 0 0 22px;
+}
+
+.ui-search-form:before {
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    background: url(../images/icon-search.png?embed) no-repeat;
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    content: "";
+}
+
+.ui-search-input {
+
+    display: inline-block;
+    height: 28px;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    -webkit-appearance: none;
+
+    /*
+        Why not use -webkit-user-modify: read-write-plaintext-only to avoid input elements on android 4.x can not be styled when focused.
+        I test on andorid 4.0.3 it's reset the default style when input focused, but this trigger another problem that user cannot input multi words.
+        @see https://code.google.com/p/android/issues/detail?id=24746
+    */
+
+}
+
+.ui-search-input::-webkit-input-placeholder{
+    padding-top: 2px;
+}
+
+.ui-search-input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.ui-search-cancel {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    width: 16%;
+    font-size: 16px;
+    text-align: center;
+    color: #858585;
+}
+
+.ui-search-reset {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 78%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+
+    background-color: #858585;
+    color: #fff;
+
+    border-radius: 14px;
+
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    line-height: 10px;
+    text-align: center;
+}
+
+.ui-search.js-focus .ui-search-cancel {
+    display: block;
+}
+
+.ui-search.js-focus .ui-search-form {
+    width: 86%;
+}
+
+/* TODO: reset button */
+.ui-search.js-input .ui-search-reset {
+    display: block;
+}
+
+/* /SearchBar */

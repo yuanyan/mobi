@@ -1,0 +1,75 @@
+/* Button */
+
+.ui-button {
+    display: inline-block;
+
+    border-radius: 3px;
+    padding: 6px 10px;
+    margin: 4px 0;
+    border: 1px solid #0079FF;
+    color: #0079FF;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    background-color: transparent;
+
+    -webkit-appearance: none;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+}
+
+.ui-button:active {
+    color: #fff;
+    background: #0079FF;
+}
+
+.ui-button[disabled]{
+    pointer-events: none;
+    color: #a6a6a6;
+    border-color: #a6a6a6;
+    background: #fff;
+    opacity: 0.6;
+}
+
+.ui-button.ui-block {
+    height: 44px;
+    padding: 10px;
+    font-size: 17px;
+    line-height: 17px;
+    display: block;
+    width: 100%;
+}
+
+.ui-info {
+    color: white;
+    background: #0079FF;
+    border-color: #0079FF;
+}
+
+.ui-info:active {
+    opacity: 0.4;
+}
+
+.ui-success {
+    color: white;
+    background: #46ca5e;
+    border-color: #46ca5e;
+}
+
+.ui-success:active {
+    background: #46ca5e;
+    border-color: #46ca5e;
+    opacity: 0.4;
+}
+
+.ui-danger {
+    color: #fc4226;
+    border-color: #fc4226;
+}
+
+.ui-danger:active {
+    color: #fff;
+    background: #fc4226;
+}
+
+/* /Button */

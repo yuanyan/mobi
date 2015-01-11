@@ -1,0 +1,11 @@
+/* Panel */
+.ui-panel {
+    margin-bottom: 20px;
+    padding: 10px 12px;
+    font-size: 15px;
+    background: #FFF;
+    border-style: solid;
+    border-color: #e5e5eb;
+    border-width: 1px 0 1px 0;
+}
+/* /Panel*/
