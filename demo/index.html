@@ -73,9 +73,23 @@
             color: #fff;
         }
 
-        .my-drawer {
+        body {
             background: #323949;
             color: #EEE;
+        }
+        .my-drawer h3 {
+            padding: 15px;
+        }
+        .my-drawer li > a{
+            display: block;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            font-weight: bold;
+            text-shadow: 0 1px 0 #000;
+            text-decoration: none;
+            color: #CCC;
+            text-indent: 20px;
         }
 
         [data-lazy] {
@@ -545,8 +559,21 @@
 
 </app-stage>
 
+
 <app-drawer class="my-drawer" id="drawer-right">
     <h3>Drawer</h3>
+    <ul>
+        <li><a href="#">Default</a></li>
+        <li><a href="#">No Drag</a></li>
+        <li><a href="#">Drag Element</a></li>
+        <li><a href="#">Right Disabled</a></li>
+        <li><a href="#">Hyperextension</a></li>
+        <li><a href="#">Skinny</a></li>
+        <li><a href="#">Toggles</a></li>
+        <li><a href="#">Class Names</a></li>
+        <li><a href="#">Expanding</a></li>
+        <li><a href="#">Settings</a></li>
+    </ul>
 </app-drawer>
 
 <!-- 对话类内容: 属于App级别，应在App节点下 -->
