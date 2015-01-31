@@ -7,7 +7,7 @@ define(['./os'], function(){
     var os = $.os;
     function scrollFix() {
 
-        $('.js-no-bounce').on('touchmove', function(event){
+        $('.no-bounce').on('touchmove', function(event){
             event.preventDefault();
         });
 
@@ -47,6 +47,6 @@ define(['./os'], function(){
         scrollFix();
     }else{
         var html = document.documentElement;
-        html.className = html.className + ' ' + 'js-no-overflow-scrolling';
+        html.className = html.className + ' ' + 'no-overflow-scrolling';
     }
 });

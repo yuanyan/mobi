@@ -27,7 +27,7 @@
     text-align: center;
 }
 
-app-dialog.js-show > .ui-notify {
+app-dialog.show > .ui-notify {
     opacity: 1;
     visibility: visible;
 

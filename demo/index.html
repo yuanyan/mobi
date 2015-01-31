@@ -100,12 +100,29 @@
             border: 1px solid #eee;
         }
 
-        .ui-right {
+        app-header .ui-right, app-header .ui-left {
+            color: #0079FF;
             position: absolute;
-            right: 10px;
             top: 50%;
             -webkit-transform: translate3d(0, -50%, 0);
             transform: translate3d(0, -50%, 0);
+            font-size: 20px;
+        }
+
+        app-header .ui-right {
+            right: 10px;
+        }
+
+        app-header .ui-left {
+            opacity: 0;
+            left: 10px;
+            -webkit-transition: all .2s;
+            -moz-transition:   all .2s;
+            transition:       all .2s;
+        }
+
+        app-header .ui-left.active{
+            opacity: 1;
         }
 
     </style>
@@ -113,10 +130,10 @@
 <body>
 
 <app-stage data-dragger="drawer" data-target="#drawer-right">
-<app-top-bar class="js-no-bounce">
-    <app-tab class="scene1 js-active">
+<app-header class="no-bounce">
+    <app-tab class="scene1 active">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button js-active" data-toggle="tab" data-target="#scene1-tab1" aria-controls="tab1"
+            <li class="ui-button active" data-toggle="tab" data-target="#scene1-tab1" aria-controls="tab1"
                 role="tab">列表1
             </li>
             <li class="ui-button" data-toggle="tab" data-target="#scene1-tab2" aria-controls="tab2" role="tab">列表2<span
@@ -125,7 +142,7 @@
     </app-tab>
     <app-tab class="scene2">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button js-active" data-toggle="tab" data-target="#scene2-tab1" aria-controls="tab1"
+            <li class="ui-button active" data-toggle="tab" data-target="#scene2-tab1" aria-controls="tab1"
                 role="tab">按钮
             </li>
             <li class="ui-button" data-toggle="tab" data-target="#scene2-tab2" aria-controls="tab2" role="tab">图标按钮</li>
@@ -133,7 +150,7 @@
     </app-tab>
     <app-tab class="scene3">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button  js-active" data-toggle="tab" data-target="#scene3-tab1" aria-controls="tab1"
+            <li class="ui-button  active" data-toggle="tab" data-target="#scene3-tab1" aria-controls="tab1"
                 role="tab">Spinner
             </li>
             <li class="ui-button" data-toggle="tab" data-target="#scene3-tab2" aria-controls="tab2" role="tab">
@@ -147,7 +164,7 @@
     </app-tab>
     <app-tab class="scene4">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button js-active" data-toggle="tab" data-target="#scene4-tab1" aria-controls="tab1"
+            <li class="ui-button active" data-toggle="tab" data-target="#scene4-tab1" aria-controls="tab1"
                 role="tab">Tab
             </li>
             <li class="ui-button" data-toggle="tab" data-target="#scene4-tab2" aria-controls="tab2" role="tab">Notify
@@ -161,7 +178,7 @@
     </app-tab>
     <app-tab class="scene5">
         <ul class="ui-groupbutton" role="tablist">
-            <li class="ui-button js-active" data-toggle="tab" data-target="#scene5-tab1" aria-controls="tab1"
+            <li class="ui-button active" data-toggle="tab" data-target="#scene5-tab1" aria-controls="tab1"
                 role="tab">SearchBar
             </li>
             <li class="ui-button" data-toggle="tab" data-target="#scene5-tab2" aria-controls="tab2" role="tab">
@@ -169,13 +186,17 @@
             </li>
         </ul>
     </app-tab>
+    <div class="ui-left back">
+        <span class="ui-icon ion-ios7-arrow-back" data-toggle="drawer" data-target="#drawer-right"></span>  Back
+    </div>
+
     <div class="ui-right">
         <span class="ui-icon ion-navicon-round" data-toggle="drawer" data-target="#drawer-right"></span>
     </div>
-</app-top-bar>
-<app-bottom-bar class="js-no-bounce" role="toolbar"> <!-- tabindex="0" 在android上会触发一个高亮边框 -->
+</app-header>
+<app-footer class="no-bounce" role="toolbar"> <!-- tabindex="0" 在android上会触发一个高亮边框 -->
     <!-- 尾部内容 -->
-    <a class="ui-bottom-bar-button js-active" role="button" data-toggle="tab" data-target=".scene1">
+    <a class="ui-bottom-bar-button active" role="button" data-toggle="tab" data-target=".scene1">
         <span class="ui-icon ion-ios7-camera-outline"></span>
         <span class="ui-label">CSS</span>
     </a>
@@ -196,13 +217,13 @@
         <span class="ui-label">JS</span>
     </a>
     <!-- /尾部内容-->
-</app-bottom-bar>
+</app-footer>
 
 <!-- 一个App可以多个scene -->
-<app-scene class="scene1 js-active">
+<app-scene class="scene1 active">
         <!-- 主体内容 -->
 
-        <app-tab class="js-active" id="scene1-tab1" role="tabpanel">
+        <app-tab class="active" id="scene1-tab1" role="tabpanel">
 
             <p class="my-banner">
                 <span class="my-banner-text">你已累计消费</span>
@@ -229,17 +250,17 @@
             </ul>
 
             <ul class="ui-list arrow-right">
-                <li class="ui-item"><a href="#">订单<span class="ui-right">待付款 <span class="ui-red">11</span></span></a>
+                <li class="ui-item"><a href="#" data-nav="#scene6-container">订单<span class="ui-right">待付款 <span class="ui-red">11</span></span></a>
                 </li>
             </ul>
 
             <ul class="ui-list arrow-right">
-                <li class="ui-item"><a href="#">优惠券<span class="ui-right">23</span></a></li>
+                <li class="ui-item"><a href="#" data-nav="#scene6-container" data-transition="fade">优惠券<span class="ui-right">23</span></a></li>
             </ul>
 
             <ul class="ui-list arrow-right">
-                <li class="ui-item"><a href="#">消息中心<span class="ui-right ui-red-dot"></span></a></li>
-                <li class="ui-item"><a href="#">收藏商家</a></li>
+                <li class="ui-item"><a href="#" data-nav="#scene6-container" data-transition="fade-expand">消息中心<span class="ui-right ui-red-dot"></span></a></li>
+                <li class="ui-item"><a href="#" data-nav="#scene6-container" data-transition="fade-contract">收藏商家</a></li>
             </ul>
 
         </app-tab>
@@ -270,7 +291,7 @@
 </app-scene>
 
 <app-scene class="scene2">
-        <app-tab class="js-active" id="scene2-tab1" role="tabpanel">
+        <app-tab class="active" id="scene2-tab1" role="tabpanel">
             <h3 class="ui-caption">按钮</h3>
 
             <p class="ui-panel">
@@ -302,7 +323,7 @@
 </app-scene>
 
 <app-scene class="scene3">
-        <app-tab class="js-active" id="scene3-tab1" role="tabpanel">
+        <app-tab class="active" id="scene3-tab1" role="tabpanel">
 
             <h3 class="ui-caption">Dark</h3>
 
@@ -331,15 +352,15 @@
         </app-tab>
 
         <app-tab id="scene3-tab2" role="tabpanel">
-            <div class="ui-carousel js-slide" data-ride="carousel">
+            <div class="ui-carousel slide" data-ride="carousel">
                 <ol class="ui-carousel-indicators">
-                    <li class="js-active"></li>
+                    <li class="active"></li>
                     <li></li>
                     <li></li>
                     <li></li>
                 </ol>
                 <div class="ui-carousel-inner">
-                    <div class="ui-carousel-item js-active">
+                    <div class="ui-carousel-item active">
                         <img width="100%" src="http://lorempixel.com/640/300/sports/1/">
                     </div>
                     <div class="ui-carousel-item">
@@ -425,14 +446,14 @@
         </app-tab>
 </app-scene>
 
-<app-scene class="scene4">
-        <app-tab class="js-active" id="scene4-tab1" role="tabpanel">
+<app-scene id="scene4-container" class="scene4">
+        <app-tab class="active" id="scene4-tab1" role="tabpanel">
 
             <h3 class="ui-caption">Blue</h3>
 
             <div class="ui-panel">
                 <ul class="ui-groupbutton">
-                    <li class="ui-button js-active" data-target="#" data-toggle="tab">列表 1<span class="ui-red-counter">123</span>
+                    <li class="ui-button active" data-target="#" data-toggle="tab">列表 1<span class="ui-red-counter">123</span>
                     </li>
                     <li class="ui-button" data-target="#" data-toggle="tab">列表 2</li>
                     <li class="ui-button" data-target="#" data-toggle="tab">列表 3<span class="ui-red-counter">2</span>
@@ -444,7 +465,7 @@
 
             <div class="ui-panel">
                 <ul class="ui-groupbutton ui-gray">
-                    <li class="ui-button js-active" data-target="#" data-toggle="tab">列表 1</li>
+                    <li class="ui-button active" data-target="#" data-toggle="tab">列表 1</li>
                     <li class="ui-button" data-target="#" data-toggle="tab">列表 2</li>
                     <li class="ui-button" data-target="#" data-toggle="tab">列表 3<span class="ui-blue-counter">1</span>
                     </li>
@@ -516,9 +537,7 @@
 </app-scene>
 
 <app-scene id="scene5-container" class="scene5">
-        <app-tab class="js-active" id="scene5-tab1" role="tabpanel">
-
-            <h3 class="ui-caption">Normal</h3>
+        <app-tab class="active" id="scene5-tab1" role="tabpanel">
 
             <div id="my-search" class="ui-search">
                 <form class="ui-search-form">
@@ -532,7 +551,6 @@
         </app-tab>
 
         <app-tab id="scene5-tab2" role="tabpanel">
-
             <h3 class="ui-caption">Nature</h3>
             <img data-lazy="http://lorempixel.com/400/200/nature/1/">
             <img data-lazy="http://lorempixel.com/400/200/nature/2/">
@@ -557,8 +575,29 @@
         </app-tab>
 </app-scene>
 
-</app-stage>
+<app-scene id="scene6-container" class="scene6">
+    <ul class="ui-list">
+        <li class="ui-title-item">A</li>
+        <li class="ui-item"><a href="">Amazon</a></li>
+        <li class="ui-item"><a href="">Apple</a></li>
+        <li class="ui-item"><a href="">Alibaba</a></li>
+        <li class="ui-title-item">B</li>
+        <li class="ui-item"><a href="">Baidu</a></li>
+        <li class="ui-title-item">F</li>
+        <li class="ui-item"><a href="">Facebook</a></li>
+        <li class="ui-title-item">G</li>
+        <li class="ui-item"><a href="">Google</a></li>
+        <li class="ui-title-item">M</li>
+        <li class="ui-item"><a href="">Microsoft</a></li>
+        <li class="ui-item"><a href="">Mozilla</a></li>
+        <li class="ui-title-item">Y</li>
+        <li class="ui-item"><a href="">Yahoo</a></li>
+        <li class="ui-title-item">T</li>
+        <li class="ui-item"><a href="">Tencent</a></li>
+    </ul>
+</app-scene>
 
+</app-stage>
 
 <app-drawer class="my-drawer" id="drawer-right">
     <h3>Drawer</h3>

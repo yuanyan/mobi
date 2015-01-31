@@ -44,7 +44,7 @@
     color: #000;
 }
 
-.ui-item > a.js-active {
+.ui-item > a.active {
     z-index: 1;
     color: #fff;
     background: #2087fc;
@@ -96,7 +96,7 @@
     -webkit-transform: rotate(45deg);
 }
 
-.ui-list.arrow-right > .ui-item.js-active:after, .ui-item.arrow-right.js-active:after {
+.ui-list.arrow-right > .ui-item.active:after, .ui-item.arrow-right.active:after {
     color: #fff;
 }
 

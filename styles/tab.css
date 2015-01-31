@@ -4,7 +4,7 @@ app-tab {
     display: none;
 }
 
-app-tab.js-active {
+app-tab.active {
     display: block;
 }
 

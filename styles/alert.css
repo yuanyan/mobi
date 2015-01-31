@@ -24,7 +24,7 @@
 
 }
 
-app-dialog.js-show > .ui-alert{
+app-dialog.show > .ui-alert{
     opacity: 1;
     visibility: visible;
 

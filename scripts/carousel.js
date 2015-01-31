@@ -1,6 +1,6 @@
 define(['./transition'], function(){
     
-    var activeClass = 'js-active';
+    var activeClass = 'active';
     var slidEvent = 'slid:carousel';
     
     function Carousel(element, options) {
@@ -56,7 +56,7 @@ define(['./transition'], function(){
     Carousel.prototype.pause = function (e) {
         e || (this.paused = true);
 
-        if (this.$element.find('.js-next, .js-prev').length && $.support.transition) {
+        if (this.$element.find('.next, .prev').length && $.support.transition) {
             this.$element.trigger($.support.transition.end);
             this.cycle(true)
         }
@@ -105,10 +105,10 @@ define(['./transition'], function(){
             })
         }
 
-        if ($.support.transition && this.$element.hasClass('js-slide') && !this.swiping) {
+        if ($.support.transition && this.$element.hasClass('slide') && !this.swiping) {
             // js related class
-            var directionClass = 'js-' + direction;
-            var typeClass = 'js-' + type;
+            var directionClass = '' + direction;
+            var typeClass = '' + type;
             $next.addClass(typeClass);
             $next[0].offsetWidth; // force reflow
             $active.addClass(directionClass);
@@ -186,8 +186,8 @@ define(['./transition'], function(){
                 ticker = setInterval(track, 100);
 
                 that.pause();
-                that.$left.addClass('js-show');
-                that.$right.addClass('js-show');
+                that.$left.addClass('show');
+                that.$right.addClass('show');
             }
 
             e.preventDefault();
@@ -288,7 +288,7 @@ define(['./transition'], function(){
 
                     [that.$left, that.$right].forEach(function($el){
                         $el[0].style[xform] = 'translate3d(0, 0, 0)';
-                        $el.removeClass('js-show');
+                        $el.removeClass('show');
                     })
 
                     if(slide) that.slide(type);

@@ -38,11 +38,11 @@
     padding: 2px 0;
 }
 
-.ui-bottom-bar-button.js-active {
+.ui-bottom-bar-button.active {
     color:rgb(21, 125, 251);
 }
 
-.ui-bottom-bar-button.js-active .ui-icon {
+.ui-bottom-bar-button.active .ui-icon {
     color:rgb(21, 125, 251);
 }
 

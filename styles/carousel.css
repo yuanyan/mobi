@@ -20,42 +20,42 @@
     -webkit-transform: translate3d(0,0,0);
 }
 
-.ui-carousel-inner > .js-show,
-.ui-carousel-inner > .js-active,
-.ui-carousel-inner > .js-next,
-.ui-carousel-inner > .js-prev {
+.ui-carousel-inner > .show,
+.ui-carousel-inner > .active,
+.ui-carousel-inner > .next,
+.ui-carousel-inner > .prev {
     display: block;
 }
 
-.ui-carousel-inner > .js-active {
+.ui-carousel-inner > .active {
     left: 0;
     z-index: 10;
 }
 
-.ui-carousel-inner > .js-show,
-.ui-carousel-inner > .js-next,
-.ui-carousel-inner > .js-prev {
+.ui-carousel-inner > .show,
+.ui-carousel-inner > .next,
+.ui-carousel-inner > .prev {
     position: absolute;
     top: 0;
     width: 100%;
 }
 
-.ui-carousel-inner > .js-next {
+.ui-carousel-inner > .next {
     left: 100%;
 }
 
-.ui-carousel-inner > .js-prev {
+.ui-carousel-inner > .prev {
     left: -100%;
 }
-.ui-carousel-inner > .js-next.js-left,
-.ui-carousel-inner > .js-prev.js-right {
+.ui-carousel-inner > .next.left,
+.ui-carousel-inner > .prev.right {
     left: 0;
 }
-.ui-carousel-inner > .js-active.js-left {
+.ui-carousel-inner > .active.left {
     left: -100%;
 }
 
-.ui-carousel-inner > .js-active.js-right {
+.ui-carousel-inner > .active.right {
     left: 100%;
 }
 
@@ -82,7 +82,7 @@
     border-radius: 8px;
 }
 
-.ui-carousel-indicators li.js-active {
+.ui-carousel-indicators li.active {
     background-color: #fff;
 }
 /* /Carousel */

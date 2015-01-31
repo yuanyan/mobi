@@ -95,16 +95,16 @@
     text-align: center;
 }
 
-.ui-search.js-focus .ui-search-cancel {
+.ui-search.focus .ui-search-cancel {
     display: block;
 }
 
-.ui-search.js-focus .ui-search-form {
+.ui-search.focus .ui-search-form {
     width: 86%;
 }
 
 /* TODO: reset button */
-.ui-search.js-input .ui-search-reset {
+.ui-search.input .ui-search-reset {
     display: block;
 }
 

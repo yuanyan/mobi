@@ -20,7 +20,7 @@ visibility: hidden;
     backface-visibility: hidden;
 }
 
-app-dialog.js-show > .ui-actionsheet {
+app-dialog.show > .ui-actionsheet {
     opacity: 1;
     visibility: visible;
 

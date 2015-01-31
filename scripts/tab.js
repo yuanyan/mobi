@@ -1,6 +1,6 @@
 define(function(){
 
-    var activeClass = 'js-active';
+    var activeClass = 'active';
     var showEvent = 'show:tab';
     var shownEvent = 'shown:tab';
 
@@ -35,13 +35,18 @@ define(function(){
     };
 
     Tab.prototype.activate = function ($element, $container, callback) {
-        // Why use helper class? js-active class is also used in inner container.
+        // Why use helper class? active class is also used in inner container.
         var helperClass = 'zepto-tab-' + Date.now();
         $container.addClass(helperClass);
         var $active  = $('.' + helperClass + '>.'+ activeClass, $container);
         $container.removeClass(helperClass);
-        $active.removeClass(activeClass);
-        $element.addClass(activeClass);
+
+        $active
+            .removeClass(activeClass);
+
+        $element
+            .addClass(activeClass);
+
         callback && callback()
     };
 

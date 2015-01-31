@@ -27,7 +27,7 @@ app-stage * {
     box-sizing: border-box;
 }
 
-app-top-bar, app-bottom-bar {
+app-footer, app-header {
     /* hairline, using a 1x2px image */
     background-image: url(data:image/gif;base64,R0lGODlhAQACAPABAMjHzP///yH/C1hNUCBEYXRhWE1QAz94cAAh+QQFAAABACwAAAAAAQACAAACAgwKADs=);
     background-repeat: repeat-x;
@@ -44,13 +44,13 @@ app-top-bar, app-bottom-bar {
     height: 48px;
 }
 
-app-top-bar {
+app-header {
     display: block;
     top: 0;
     background-position: bottom left;
 }
 
-app-bottom-bar {
+app-footer {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -75,27 +75,23 @@ app-scene {
     z-index: 2;
 }
 
-app-scene.js-active {
+app-scene.active {
     display: block;
 }
 
-.js-no-overflow-scrolling app-scene {
+.no-overflow-scrolling app-scene {
     position: static;
 }
 
-app-scene-content {
-    display: block;
-    z-index: 2;
-}
 
 /* Bottom-bar under the app node */
-app-bottom-bar ~ app-scene {
+app-footer ~ app-scene {
     /*margin-bottom: 50px;*/
     border-bottom: 48px solid transparent;
 }
 
 /* Top-bar under the app node */
-app-top-bar ~ app-scene {
+app-header ~ app-scene {
     /*margin-top: 50px;*/
     border-top: 48px solid transparent;
 }

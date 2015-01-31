@@ -7,7 +7,8 @@ define([
     './carousel',
     './lazyload',
     './countable',
-    './deletable'
+    './deletable',
+    './nav'
 ],function () {
     return $;
 });

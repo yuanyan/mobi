@@ -23,7 +23,7 @@
     background-color: #D3E5F9;
 }
 
-.ui-groupbutton .ui-button.js-active {
+.ui-groupbutton .ui-button.active {
     color: #fff;
     background: #0079FF;
 }
@@ -49,7 +49,7 @@
     background-color: rgb(230, 230, 230);
 }
 
-.ui-groupbutton.ui-gray .ui-button.js-active {
+.ui-groupbutton.ui-gray .ui-button.active {
     color: #fff;
     background: rgb(128, 128, 128);
 }

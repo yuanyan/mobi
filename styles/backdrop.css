@@ -1,5 +1,5 @@
 /* Backdrop */
-.js-backdrop {
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,11 +19,11 @@
     z-index: 9999;
 }
 
-.js-backdrop.js-effect-fade {
+.backdrop.effect-fade {
     opacity: 0;
 }
 
-.js-backdrop.js-show {
+.backdrop.show {
     visibility: visible;
     opacity: .5;
 }

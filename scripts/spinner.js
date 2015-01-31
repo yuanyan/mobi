@@ -63,7 +63,7 @@ define(function(){
             outer : 9    // The outer offset of the spinner in px
         },
         width : 2,         // The the width of each lines in px
-        className: 'js-spinner', // CSS class to assign to the element
+        className: 'spinner', // CSS class to assign to the element
         wrapper: {
             top: '50%',          // center vertically
             left: '50%',         // center horizontally

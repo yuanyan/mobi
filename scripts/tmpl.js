@@ -1,4 +1,4 @@
-// Requirejs-tmpl plugin inspired by https://github.com/requirejs/text
+// Requiretmpl plugin inspired by https://github.com/requirejs/text
 // Templating inspired by http://underscorejs.org/#template
 // Yuanyan(yuanyan.cao@gmail.com) MIT. 
 

@@ -1,6 +1,6 @@
 define(['./transition', './fixed'], function(){
 
-    var showClass = 'js-show';
+    var showClass = 'show';
     // why event without namespace? Zepto do not support trigger custom event with namespace like foo.bar .
     var showEvent = 'show:dialog';
     var shownEvent = 'shown:dialog';
@@ -51,7 +51,7 @@ define(['./transition', './fixed'], function(){
             that.$element.show();
 
             if (transition) {
-                $(document.documentElement).addClass('js-effect-' + that.options.effect);
+                $(document.documentElement).addClass('effect-' + that.options.effect);
                 that.$element[0].offsetWidth; // force reflow
             }
 
@@ -108,7 +108,7 @@ define(['./transition', './fixed'], function(){
         this.$element.hide();
         this.backdrop(function () {
             that.removeBackdrop();
-            $(document.documentElement).removeClass('js-effect-' + that.options.effect);
+            $(document.documentElement).removeClass('effect-' + that.options.effect);
             that.$element.trigger(hiddenEvent)
         })
     };
@@ -119,12 +119,12 @@ define(['./transition', './fixed'], function(){
     };
 
     Dialog.prototype.backdrop = function (callback) {
-        var animate = this.options.effect ? 'js-effect-fade' : '';
+        var animate = this.options.effect ? 'effect-fade' : '';
 
         if (this.isShown && this.options.backdrop) {
             var doAnimate = $.support.transition && animate;
 
-            this.$backdrop = $('<div class="js-backdrop ' + animate + '" />')
+            this.$backdrop = $('<div class="backdrop ' + animate + '" />')
                 .appendTo(this.$element.parent())
                 .emulateFixed();
 
